@@ -63,9 +63,9 @@
       <Project>{4e9a67a4-e3c7-4580-8160-9148a5ed9111}</Project>
       <Name>Palmtrio.Instrument</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Palmtrio.Web\Palmtio.Web.csproj">
+    <ProjectReference Include="..\Palmtrio.Web\Palmtrio.Web.csproj">
       <Project>{4eff1037-a7c8-4060-a6b6-4f1cdf072d5f}</Project>
-      <Name>Palmtio.Web</Name>
+      <Name>Palmtrio.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

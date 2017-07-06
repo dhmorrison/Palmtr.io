@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palmtio.Web", "Palmtrio.Web\Palmtio.Web.csproj", "{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palmtrio.Domain", "Palmtrio.Domain\Palmtrio.Domain.csproj", "{3B1D8E07-DE04-40BE-A1DF-43017EF76A92}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palmtrio.Instrument", "Palmtrio.Instrument\Palmtrio.Instrument.csproj", "{4E9A67A4-E3C7-4580-8160-9148A5ED9111}"
@@ -18,16 +16,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Local.testsettings = Local.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palmtrio.Web", "Palmtrio.Web\Palmtrio.Web.csproj", "{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B1D8E07-DE04-40BE-A1DF-43017EF76A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B1D8E07-DE04-40BE-A1DF-43017EF76A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B1D8E07-DE04-40BE-A1DF-43017EF76A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -44,6 +40,10 @@ Global
 		{B9607ED6-1942-426D-B2E5-D2357870AED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9607ED6-1942-426D-B2E5-D2357870AED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9607ED6-1942-426D-B2E5-D2357870AED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EFF1037-A7C8-4060-A6B6-4F1CDF072D5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
