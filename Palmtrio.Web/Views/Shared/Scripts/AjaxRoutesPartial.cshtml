@@ -1,0 +1,95 @@
+﻿<script>
+
+    function handleRefreshContact() {
+        $('.btn-contact-view').off("click");
+        $('.btn-contact-view').on("click", function () {
+            $(this).off("click");
+            $('#three').slideUp(500);
+            window.location = "@Url.RouteUrl(new { controller = "Landing", action = "Index", panel = "view-contact" })";
+        });
+    }
+    function handleViewContact() {
+        $('.btn-contact-view').off("click");
+        $('.btn-contact-view').on("click", function () {
+            $(this).off("click");
+            $.ajax({
+                url: "@Url.RouteUrl(new { controller = "Landing", action = "view-contact" })",
+                dataType: "html",
+                success: function (result) {
+                    landingIndex_loadContactView(result);
+                }
+            });
+        });
+    }
+    function handleViewTeamDetail() {
+        $('.btn-team-detail-view').off("click");
+        $('.btn-team-detail-view').on("click", function () {
+            $(this).off("click");
+            var idElm = $(this).closest('.actions').find('.hdn-action-parms input[name="TeamDetailId"]');
+            var href = "@Url.RouteUrl(new { controller = "Landing", action = "view-team-detail" })" + "/" + idElm.val();
+            $.ajax({
+                url: href,
+                dataType: "html",
+                success: function (result) {
+                    landingIndex_loadTeamDetailView(result);
+                }
+            });
+        });
+    }
+    function handleRefreshTeam() {
+        $('.btn-team-view').off("click");
+        $('.btn-team-view').on("click", function () {
+            $(this).off("click");
+            $('#three').slideUp(500);
+            window.location = "@Url.RouteUrl(new { controller = "Landing", action = "Index", panel = "view-team" })";
+        });
+    }
+    function handleViewTeam() {
+        $('.btn-team-view').off("click");
+        $('.btn-team-view').on("click", function () {
+            $(this).off("click");
+            $.ajax({
+                url: "@Url.RouteUrl(new { controller = "Landing", action = "view-team" })",
+                dataType: "html",
+                success: function (result) {
+                    landingIndex_loadTeamView(result);
+                }
+            });
+        });
+    }
+    function handleContactSubmit() {
+        $('.btn-contact-submit').off("click");
+        $('.btn-contact-submit').on("click", function () {
+            $(this).off("click");
+            $(this).closest('ul.actions').find('.button').addClass('disabled');
+            $('#contact-form').hide();
+            $('#contact-submit-progress').show();
+
+            var frmData = $(this).closest('div').find('form').serializeArray();
+            $.ajax({
+                url: "@Url.RouteUrl(new { controller = "Landing", action = "contact-submit" })",
+                dataType: "json",
+                method: "POST",
+                data: frmData,
+                success: function (result) {
+                    if (result.isSuccess === true) {
+                        $('#payment-progress-msg-upper').html('Thank you');
+                        $('#payment-progress-msg-lower').html('We will review your information and contact you as soon as possible.');
+                        $('#payment-progress-symbol').removeClass('fa-spin').removeClass('fa-refresh').removeClass('fa-sun-o').addClass('fa-smile-o');
+                    }
+                    else {
+                        $('#payment-progress-msg-upper').html('Server Error');
+                        $('#payment-progress-msg-lower').html('We sincerely apologize for this service interruption.  Please come back soon.');
+                        $('#payment-progress-symbol').removeClass('fa-spin').removeClass('fa-refresh').removeClass('fa-sun-o').addClass('fa-bomb');
+                    }
+                } 
+            });
+
+        });
+    }
+
+
+    $(document).ready(function () {
+        $.ajaxSetup({ cache: false });
+    });
+</script>

@@ -1,0 +1,50 @@
+﻿@model Palmtrio.Web.Models.VideoStreamPartialViewModel
+<section id="three" class="main style1 special">
+    <div class="container">
+        <header class="major">
+            <h2>Leadership Team</h2>
+        </header>
+        @*<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>*@
+        <div class="row 150%">
+            <div class="6u 12u$(medium)">
+                <div class="image fit">
+                    @{
+                        Model.VideoFileName = "davevid";  // davevid.mp4
+                        Html.RenderPartial("~/Views/Shared/Partials/VideoStreamPartial.cshtml", Model);}
+                </div>
+                <h3>
+                    Dave
+                </h3>
+                <h4>Master of the Universe</h4>
+                <h4>Principal Software Engineer</h4>
+                <p>President, Palmtrio, LLC, Full-spectrum developer, Randy the "Macho Man" Father Figure, Super positive motivator...</p>
+            </div>
+            <div class="6u 12u$(medium)">
+                <h4>Expertise</h4>
+                <p>
+                    C#, .NET, MVC, Angular 1.0, Web API 2, TFS, IIS, SQL, jQuery, JavaScript, CSS, HTML, Dependency Injection, Aspect-oriented Development, Windows Server 2012 R2
+                </p>
+                <h4>Work History</h4>
+                <p>
+                    Fishbowl, Inc.<br/>
+                    Cambridge Associates, LLC<br/>
+                    Spectrum Technology Group<br/>
+                    Ciber, Inc.<br/>
+                    Association Software Co., Inc.<br />
+                </p>
+                <h4>Education</h4>
+                <p>
+                    B.A Philosopy, M.A. English<br/>
+                    Washington College
+                </p>
+            </div>
+            <div class="12u$ 12u$(medium)">
+                <ul class="actions vertical">
+                    <li><a href="javascript:void(0);" class="button btn-team-view">Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+

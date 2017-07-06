@@ -1,0 +1,45 @@
+﻿@model Palmtrio.Web.Models.VideoStreamPartialViewModel
+<section id="three" class="main style1 special">
+    <div class="container">
+        <header class="major">
+            <h2>Leadership Team</h2>
+        </header>
+        @*<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>*@
+        <div class="row 150%">
+            <div class="6u 12u$(medium)">
+                @{
+                    Model.VideoFileName = "johnvid";
+                    Html.RenderPartial("~/Views/Shared/Partials/VideoStreamPartial.cshtml", Model);}
+                <h3>
+                    John
+                </h3>
+                <h4>Principal Software Engineer</h4>
+                <p>Full-spectrum developer, mathematician, historian, and multidisciplinary polymath</p>
+            </div>
+            <div class="6u 12u$(medium)">
+                <h4>Expertise</h4>
+                <p>
+                    C#, .NET, MVC, Web API 2, TFS, IIS, SQL, jQuery, JavaScript, CSS, HTML, Dependency Injection, Aspect-oriented Development, Windows Server 2012 R2
+                </p>
+                <h4>Work History</h4>
+                <p>
+                    Expovision, Inc.<br/>
+                    Cambridge Associates, LLC<br/>
+                    Gannett Healthcare Group<br/>
+                    Cvent, Inc.<br/>
+                    Feld Entertainment, Inc.<br />
+                </p>
+                <h4>Education</h4>
+                <p>
+                    B.S. Computer Science, Minor History<br/>
+                    University of Virginia
+                </p>
+            </div>
+            <div class="12u$ 12u$(medium)">
+                <ul class="actions vertical">
+                    <li><a href="javascript:void(0);" class="button btn-team-view">Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
