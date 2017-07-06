@@ -1,0 +1,75 @@
+﻿<section class="main style1 special" id="three">
+    <div class="container">
+        <div class="row 150%">
+            <div class="12u 12u$(medium)">
+                <header class="major">
+                    <h2><span class="icon fa-fax">Contact</span></h2>
+                </header>
+            </div>
+            <div class="6u 12u$(medium)">
+                <ul class="major-icons">
+                    <li><span class="icon major"><img style="cursor:pointer; padding: 22% 15%; height:100%; width:100%;" src="@Url.Content("~/assets/images/theme/authnet_secure.png")" onclick="viewContact_verifyAuthorizeNetSeal();"></span></li>
+                    <li><span class="icon major"><img style="cursor:pointer; padding: 31% 2%; height:100%; width:100%;" src="@Url.Content("~/assets/images/theme/mcafee_secure.png")" onclick="viewContact_verifyMcAfeeCertified();" /></span></li>
+                    <li><span class="icon major"><img style="cursor:pointer; padding: 37% 0%; height:100%; width:100%;" src="@Url.Content("~/assets/images/theme/gd_siteseal.gif")" onclick="viewContact_verifyGoDaddySeal();" alt="SSL site seal - click to verify" /></span></li>
+                </ul>
+            </div>
+            <div class="6u 12u$(medium)">
+                <h3>Request a free consultation</h3>
+                <form id="contact-form">
+                    <div class="row uniform 50%">
+                        <div class="5u 12u$(medium)">
+                            @Html.TextBox("ContactInfo.FirstName", "", new { @placeholder = "First Name" })
+                        </div>
+                        <div class="2u 12u$(medium)">
+                            @Html.TextBox("ContactInfo.MiddleInitial", "", new { @placeholder = "MI" })
+                        </div>
+                        <div class="5u 12u$(medium)">
+                            @Html.TextBox("ContactInfo.LastName", "", new { @placeholder = "Last Name" })
+                        </div>
+                        <div class="6u 12u$(medium)">
+                            @Html.TextBox("ContactInfo.Phone", "", new { @placeholder = "Phone" })
+                        </div>
+                        <div class="6u 12u$(medium)">
+                            @Html.TextBox("ContactInfo.Email", "", new { @placeholder = "Email" })
+                        </div>
+                        <div class="5u 12u$(medium)">
+                            @Html.TextBox("ContactInfo.City", "", new { @placeholder = "City" })
+                        </div>
+                        <div class="3u 12u$(medium)">
+                            @Html.TextBox("ContactInfo.State", "", new { @placeholder = "State" })
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            @Html.TextBox("ContactInfo.Zip", "", new { @placeholder = "Zip" })
+                        </div>
+                        <div class="12u$">
+                            @Html.TextArea("ContactInfo.Message", "", new { @placeholder = "Briefly describe your business or technology needs", @rows="6" })
+                        </div>
+                    </div>
+                </form>
+                <div id="contact-submit-progress" style="display:none;" class="row uniform 50%">
+                    <div class="12u 12u$(medium)">
+                        <p id="payment-progress-msg-upper">Your contact information is being processed</p>
+                    </div>
+                    <div class="12u 12u$(medium)">&nbsp;</div>
+                    <div class="12u 12u$(medium)">&nbsp;</div>
+                    <div class="12u 12u$(medium)">
+                        <span id="payment-progress-symbol" class="icon major fa-refresh fa-spin"></span>
+                    </div>
+                    <div class="12u 12u$(medium)">&nbsp;</div>
+                    <div class="12u 12u$(medium)">
+                        <p id="payment-progress-msg-lower">Please wait</p>
+                    </div>
+                    <div class="12u 12u$(medium)">&nbsp;</div>
+                </div>
+                <ul class="actions">
+                    <li><a href="javascript:void(0);" class="button special btn-contact-submit">Submit</a></li>
+                </ul>
+            </div>
+            <div class="12u 12u$(medium)">
+                <ul class="actions">
+                    <li><a href="javascript:void(0);" class="button btn-team-view">Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

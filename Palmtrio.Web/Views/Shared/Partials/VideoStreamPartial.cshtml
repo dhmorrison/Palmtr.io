@@ -1,0 +1,10 @@
+﻿@model Palmtrio.Web.Models.VideoStreamPartialViewModel
+<video controls="controls" autoplay="autoplay" class="image fit">
+    <source type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'
+            src="@Url.HttpRouteUrl("VideoStreamApiRoute", new { controller = "VideoStreamApi", action = "GetVideoStream", filename = Model.VideoFileName, extension = "mp4", speed = "fast", vsid = Model.VideoStreamId })" />
+    <source type='video/webm; codecs="vp8.0, vorbis"'
+            src="@Url.HttpRouteUrl("VideoStreamApiRoute", new { controller = "VideoStreamApi", action = "GetVideoStream", filename = Model.VideoFileName, extension = "webm", speed = "fast", vsid = Model.VideoStreamId })" />
+</video>
+<script>
+    $('video').bind("contextmenu", function () { return false; });
+</script>
